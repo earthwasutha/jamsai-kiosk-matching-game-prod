@@ -60,7 +60,7 @@ export default function Home() {
         setIsAuthentication(true);
       });
     } catch (err) {
-      console.log(err);
+      console.error(err);
     } finally {
       setIsLoading(false);
     }
@@ -85,7 +85,7 @@ export default function Home() {
       localStorage.setItem("userInfo", JSON.stringify(userInfo));
       router.push("/profile");
     } catch (err) {
-      console.log(err);
+      console.error(err);
     } finally {
       setIsLoading(false);
     }
@@ -124,7 +124,9 @@ export default function Home() {
         }
       }
     } catch (err) {
-      console.log(err);
+      console.error(err);
+      setIsOpenLoginErrorModal(true);
+      setErrorMessage((err as any)?.message ?? "เกิดข้อผิดพลาด");
     } finally {
       setIsLoading(false);
     }

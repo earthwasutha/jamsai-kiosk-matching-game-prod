@@ -68,7 +68,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'kiosk-image-uat.s3.ap-southeast-1.amazonaws.com',
+        hostname: 'kiosk-image-prod.s3.ap-southeast-1.amazonaws.com',
         port: '',
         pathname: '/**',
       },
